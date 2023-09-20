@@ -8,7 +8,7 @@ if __name__ == "__main__":
     # Load the dataset into a DataFrame
     # Encoding is set to 'latin-1' to handle special characters
     df = pd.read_csv("/Users/brocktbennett/GitHub/Project Data/Summer-Olympic-medals-1976-to-2008.csv", encoding='latin-1')
-
+    # changes
     # Display the list of countries in the DataFrame
     print("List of countries in the dataset:")
     print(df.Country)
