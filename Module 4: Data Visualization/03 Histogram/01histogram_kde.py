@@ -8,6 +8,7 @@ sns.set_style('darkgrid')
 
 # Load loan data into a dataframe
 loan = pd.read_csv("/Users/brocktbennett/GitHub/Project Data/train_Loan.csv")
+print(loan['LoanAmount'])
 # Plotting a histogram with Kernel Density Estimation (KDE) for LoanAmount
 sns.displot(loan['LoanAmount'], kde=True)
 plt.show()
