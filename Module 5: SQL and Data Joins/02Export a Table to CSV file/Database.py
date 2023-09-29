@@ -5,7 +5,7 @@ cnx = mysql.connector.connect(
     user='readonlyuser',
     password='Msis5193Fall2023',
     host='34.70.89.75',
-    database='classicmodels'
+    database='northwind'
 )
 
 # Initialize a cursor for executing SQL queries
