@@ -1,6 +1,8 @@
-import tweepy
-from dotenv import load_dotenv
+import json
+import pandas as pd
 import os
+from dotenv import load_dotenv
+import tweepy
 
 # Load environment variables
 # Update the path to where your .env file is located
@@ -12,7 +14,7 @@ api_secret = os.getenv('API_SECRET')  # Renamed from api_secrets for consistency
 access_token = os.getenv('ACCESS_TOKEN')
 access_secret = os.getenv('ACCESS_SECRET')
 
-# Authenticate to Twitter
+# Authenticate to Twitter (x.com)
 auth = tweepy.OAuthHandler(api_key, api_secret)
 auth.set_access_token(access_token, access_secret)
 
@@ -20,15 +22,13 @@ auth.set_access_token(access_token, access_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # get user information
-user = api.get_user(screen_name='elonmusk')
-print(user)
+user = api.get_user(screen_name='BillGates')
 
-# show user information
-print(f"user.name: {user.name}")
-print(f"user.screen_name: {user.screen_name}")
-print(f"user.location: {user.location}")
-print(f"user.description: {user.description}")
-print(f"user.followers_count: {user.followers_count}")
-print(f"user.listed_count: {user.listed_count}")
-print(f"user.statuses_count: {user.statuses_count}")
-print(f"user.id: {user.id}")
+# Flatten data
+df_nested_list = pd.json_normalize(user._json)
+
+# show results
+print(df_nested_list)
+
+# export dataframe to CSV file
+df_nested_list.to_csv("twitteruser.csv")
