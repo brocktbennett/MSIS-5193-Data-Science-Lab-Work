@@ -12,8 +12,6 @@ access_token = os.getenv('ACCESS_TOKEN')
 access_secret = os.getenv('ACCESS_SECRET')
 bearer_token = os.getenv('BEARER_TOKEN')
 
-# Rest of your code
-
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(api_key, api_secrets)
 auth.set_access_token(access_token, access_secret)
