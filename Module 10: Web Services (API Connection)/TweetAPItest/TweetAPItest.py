@@ -4,7 +4,7 @@ import tweepy
 
 # Load environment variables
 # Update the path to where your .env file is located
-load_dotenv("/Users/brocktbennett/GitHub/MSIS-5193-Data-Science-Lab-Work/Module 10: Web Services (API Connection)/gitignore/api_info.env")  # Adjust this path to your .env file's location
+load_dotenv("/Users/brocktbennett/GitHub/MSIS-5193-Data-Science-Lab-Work/Module 10: Web Services (API Connection)/gitignore/.env")  # Adjust this path to your .env file's location
 
 # Use environment variables
 api_key = os.getenv('API_KEY')
