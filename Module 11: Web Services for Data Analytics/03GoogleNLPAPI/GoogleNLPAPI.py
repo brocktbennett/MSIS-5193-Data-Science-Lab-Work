@@ -5,7 +5,8 @@ from google.oauth2 import service_account
 # define a function to analysis the sentiment of a text
 def analyze_text_sentiment(text):
     # load the key file
-    creds = service_account.Credentials.from_service_account_file('audiogpt-386515-59806ffe70ab.json')
+    creds = service_account.Credentials.from_service_account_file('my-msis-5193-projects-7e4b655258b4.json')
+
     # initialize a client using the key file
     client = language.LanguageServiceClient(credentials=creds,)
 

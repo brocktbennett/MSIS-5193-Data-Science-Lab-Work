@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "my-msis-5193-projects",
+  "private_key_id": "7e4b655258b439afbcb87bafb689e490447777fb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDV0AKfKrrWAcNN\n9ETH7Ai+mQJRjBP7Hv1oHuBnq1OIVg0/QRFFFBHou8c3OD9xg+nw+qmH1gJpiFrs\nsPYO+wbDXN0wDXDII1MTouAY1MWb6QZ6eV909hPmzir+ubRGVEqY1yDa/umA2fuJ\nCeGpLp0BqrUYxYY1CXARyhoMYhExlH036OTmPGDI8sf8w8QUeLI1AupSAIofFBaH\nf60HCcGbxh/mzR/gsuCO1htjOS3EQnMmoxERuoNUPiyhSFlx3G5c8Z92WhTfvWVn\nJyQTfWurcRZ8IhrlWAAefHNscAUJyGYNjKg+SJewN8rrBnibWpNSCWcVjIQlAlH3\n1FsCTCD9AgMBAAECggEACOh+O3hxyVnQc86CERxN7vb8CD7AVF2hrDVhHyCdvdfr\n/F8vI4QnDN3J+ox+5DFdTVt8NbseZZw3QZZL4irmSLx1QLvGn6gNHYvTL2WqCAlo\n6jBlYD+ia6LaWruM/cMkSoLoDQfC3cn3N2nwe3aENx4QJoSQR2RpxWv4stxhIAIe\nt3pgJxyaiGgMR/wRvfK2t9KnbskPPkY8fn6J0knrjN9bZRmYgnsf+2BBDMnj/FkF\nSATxxYG0COXJQ6D31+oPY1S6Lb7BxH62somPkayRdCEIvQIIjaG+j+ZG5ADmtSwf\n6e1e4XVE0WuFIPvR8qgiZvG4KjcyENasFUWcmxWMVwKBgQD+NBwTnsHQI8zy0Kck\n5UGTSCDetsGZbIhVxV5MJALtVlTtJUPxDnE/vwKM0g6uvaYrPie6ggCqnnkOSbgF\nkPjlbCW0OWibDL7XslHLcaTFWPmQazGa/ChpgtKgPLymF+bdPocnQTBz1a1QVSAV\nXakhXbr1sYk/yzm7eV66hLMi/wKBgQDXUtPWP9xKs9AfVHzXP6xwxUh/EoD9Crmf\nCBGxEG29vhFO1wG+EqdnSufQqSxMeBnmxgFhrRLpG5sBzSiW7MIJKWoJehP6DvPw\n7FwELuOPbWA84slB1EAeNlQa4hcnbz+ENbRIVFHqIRt3rcP8WKPkVDUGX+aNJhoR\npbmQfKVIAwKBgQDrTGLcymwOdMUF0ZuVrFv5r581aCdmE69S7WFuyzqmY+4yoPb1\nz++GGRGMNff/SW7hwiPWIPXq+MuHLTeYd2vcOTHhU+5+7tpMIDRUQ7pILia7xm1h\nT508pSq/xdi9SYyaKIHEFTR7VEOcA1+yR0MBrpgbSp2Hnl6vKRZFQgXrEwKBgHO5\n4X66DdTcdZQRHZO2diCZ94/MSyU02XS+qnuGv+SFvdmotxgIAI8EdDjyY4up1Qny\nC5YKpipBGvtJ33HWR6cS6hmz0f7IgJVRA1eAN+/DMkEnBlHqGJfkTSmxsA4SvYl6\nL63cG7aBGrkk3DvJDDTQiTsm2cus2b/4WRZt14svAoGAO7pKVNYjn+nBFBkAotF3\n9XKpgR3A5tech2UMU+27eGRv52quXRTJYAWu1xJlKJkEBKRwMzn9vitDFRvKu4d5\nSUSGrh+neyjxq70ym9OqpSYLzNoKraG9KRy+lw1NNYETzGxb7aEiq+pgweQGBZVq\npVit8m3jICL0TLoFf4SUEkI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "msis-5193-projects@my-msis-5193-projects.iam.gserviceaccount.com",
+  "client_id": "103787650615041412204",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/msis-5193-projects%40my-msis-5193-projects.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
