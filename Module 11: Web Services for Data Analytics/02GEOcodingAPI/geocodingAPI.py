@@ -1,39 +1,60 @@
 import json
+import os
 import requests
+from dotenv import load_dotenv
 
-# If you have a Google Places API key, enter it here
-api_key = 'AIzaSyBtIk8oI03aB6aYkhIvhZI6qhsJLlKjdTQ'
+# Load environment variables from .env file
+# Update the path to your .env file if necessary
+load_dotenv("/Users/brocktbennett/GitHub/MSIS-5193-Data-Science-Lab-Work/Module 11: Web Services for Data Analytics/.env")
 
-# set the service url regular part
-serviceurl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
+# Retrieve API key and other details from environment variables
+api_key = os.getenv('api_key')
+serviceurl = os.getenv('serviceurl')
+address = os.getenv('address')
 
-# specify the address
-address = '370%20Business%20Building%20Stillwater%20OK%2074078'
+# Print out the retrieved values for verification only (comment out if needed)
+print("API Key:", api_key)
+print("Service URL:", serviceurl)
+print("Address:", address)
 
-# get the full url by putting all the string together
-requrl = serviceurl+address+'&key='+api_key
+# Construct the full request URL
+requrl = serviceurl + address + '&key=' + api_key
 
-# web request
-r = requests.get(requrl)
+# Printing out the requested URL for testing
+print(requrl)
 
+# Perform the web request
+response = requests.get(requrl)
 
-# get the content and convert to string
-geolocation = r.content.decode()
+# Check if response is successful
+if response.status_code != 200:
+    print(f"Error fetching geolocation data: {response.status_code}")
+    exit(1)
 
-# convert the string to JSON format
+# Decode the content and convert to JSON format
+geolocation = response.content.decode()
 jsonlocation = json.loads(geolocation)
 
+# Check if results are available
+if not jsonlocation["results"]:
+    print("No results found for the given address.")
+    exit(1)
 
-# get the address component out as a list
-addresscomponentslist= jsonlocation["results"][0]["address_components"]
-
+# Extract address components
+addresscomponentslist = jsonlocation["results"][0]["address_components"]
 print(addresscomponentslist)
 
-county=''
+# Initialize variable to store county name
+county = ''
 
-# loop through the address components list to find county name
-for i in range(0,len(addresscomponentslist)):
-    if addresscomponentslist[i]['types'][0] == 'administrative_area_level_2':
-        county = addresscomponentslist[i]['long_name']
+# Loop through the address components to find the county name
+for component in addresscomponentslist:
+    if 'administrative_area_level_2' in component['types']:
+        county = component['long_name']
+        break
 
-print(county)
+# Print the county name or a message if not found
+if county:
+    print("County:", county)
+else:
+    print("County name not found in address components.")
